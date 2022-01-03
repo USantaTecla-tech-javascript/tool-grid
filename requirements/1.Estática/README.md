@@ -6,7 +6,7 @@ Universo Santa Tecla
 
 * Mostrar por pantalla las siguientes configuraciones:
 
-![Malla completa](https://github.com/USantaTecla-mesh/requirements/blob/master/docs/images/malla%20completa.png)
+![Malla completa](./docs/images/meshes.png)
 
 |     |     |     |     |
 | --- | --- | --- | --- |

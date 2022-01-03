@@ -106,14 +106,6 @@ function Mesh(dim) {
 
 }
 
-function f() {
-	function g() {
-		return 2;
-	}
-	return {
-		g, g, g;
-	}
-}
 let mesh = new Mesh(5);
 
 mesh.drawShape("linea horizontal", () => {
