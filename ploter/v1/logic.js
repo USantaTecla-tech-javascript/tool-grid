@@ -8,9 +8,9 @@ function log(msg) {
 }
 
 function clear() {
-	for (let i = 0; i < DIM; i++) {
+	for (let i = 0; i < dim; i++) {
 		mesh[i] = [];
-		for (let j = 0; j < DIM; j++) {
+		for (let j = 0; j < dim; j++) {
 			mesh[i][j] = " ";
 		}
 	}
@@ -20,8 +20,8 @@ function clear() {
 
 function show() {
 	let str = "";
-	for (let i = 0; i < DIM; i++) {
-		for (let j = 0; j < DIM; j++) {
+	for (let i = 0; i < dim; i++) {
+		for (let j = 0; j < dim; j++) {
 			str += mesh[i][j];
 		}
 		str += "\n";
@@ -66,10 +66,10 @@ function isOnEdge(direction) {
 		return row == 0;
 	}
 	if (direction == "south") {
-		return row == DIM - 1;
+		return row == dim - 1;
 	}
 	if (direction == "east") {
-		return column == DIM - 1;
+		return column == dim - 1;
 	}
 	if (direction == "west") {
 		return column == 0;
@@ -81,18 +81,18 @@ function getDistanceEdge(direction) {
 		return row;
 	}
 	if (direction == "south") {
-		return DIM - row - 1;
+		return dim - row - 1;
 	}
 	if (direction == "east") {
 		return column;
 	}
 	if (direction == "west") {
-		return DIM - column - 1;
+		return dim - column - 1;
 	}
 }
 
 function getDimension() {
-	return DIM;
+	return dim;
 }
 
 function drawShape(msg, script) {

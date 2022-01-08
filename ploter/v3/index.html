@@ -8,16 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" 
       href="./style.css"/>
+    <script src="./logic.js"></script>
 </head>
 
-<body>
-    <script src="./logic.js"></script>
+<body onload="render();">
     <form>
-        <input id="button" type="button" 
-        value="Dibujar" 
-        onclick="render(event, this);"><br/>
-        <textarea id="script" rows="50" cols="50" name="script">escribe tu programa aquí
-        </textarea>
+        <input id="button" type="button" value="Dibujar" onclick="render();">
+        <input id="button" type="button" value="+" onclick="increment();">
+        <input id="button" type="button" value="-" onclick="decrement();"><br/>
+        <textarea id="script" rows="50" cols="50" name="script">escribe tu programa aquí</textarea>
     </form>
     <div id="div">
     </div>
