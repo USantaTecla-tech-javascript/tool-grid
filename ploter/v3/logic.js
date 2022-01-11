@@ -144,6 +144,10 @@ function oGetDimension(){
   this.eval = function() {
     return getDimension();
   }
+
+  this.toString = function() {
+    return "getDimension()";
+  }
 }
 
 function GetDimension(){
@@ -155,6 +159,10 @@ function oGetDistanceEdge(direction){
 
   this.eval = function() {
     return getDistanceEdge(direction);
+  }
+
+  this.toString = function() {
+    return "getDistanceEdge()";
   }
 }
 
@@ -168,6 +176,10 @@ function oIsOnEdge(direction) {
   this.eval = function(){
     return isOnEdge(direction);
   }
+
+  this.toString = function(){
+    return "isOnEdge("+direction+")";
+  }
 }
 
 function IsOnEdge(direction){
@@ -180,6 +192,9 @@ function oDraw(direction, distance){
 
   this.exec = function() {
     draw(direction, distance);
+  }
+  this.toString = function(){
+    return "\n:Draw("+direction+","+distance+");";
   }
 }
 
@@ -197,6 +212,9 @@ function oShift(direction, distance){
 
   this.exec = function() {
     shift(direction, distance);
+  }
+  this.toString = function(){
+    return "\n:Shift("+direction+","+distance+");";
   }
 }
 
@@ -221,6 +239,11 @@ function oIf(condition, then, esle){
       }
     }
   }
+  this.toString = function(){
+    return "\nif("+conditione.toString()+") then (then)"+
+      then.toString() + "\nelse (else)" +
+      esle.toString() + "\nendif";
+  }
 }
 
 function If(condition, then, esle){
@@ -238,6 +261,11 @@ function oWhile(condition, body){
       }
     };
   }
+
+  this.toString = function(){
+    return "\nwhile("+conditione.toString()+") is (then)"+
+    body.toString() + "\nendwhile (otherwise)";
+  }
 }
 
 function While(condition, body){
@@ -254,6 +282,10 @@ function oDoWhile(body, condition){
         sentence.exec();
       }
     } while (condition.eval());
+  }
+
+  this.toString = function(){
+    return "\nrepeat"+body.toString() + "\nrepeat while (otherwise)";
   }
 }
 
