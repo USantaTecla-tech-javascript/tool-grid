@@ -1,3 +1,5 @@
+console.log(getMesh("x+y==3"));
+
 analyze(
   ["x==4 || y==4"
     , "x+y==8"
